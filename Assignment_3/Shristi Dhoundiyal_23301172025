@@ -1,0 +1,183 @@
+#Name:Shristi Dhoundiyal
+#Roll number:23301172025
+#College name: INDIRA GANDHI DELHI TECHNICAL UNIVERSITY FOR WOMEN
+#Assignment 3
+
+#Create a function to print first 10 natural numbers
+def first_10_numbers():
+    for i in range(1,11):
+        print(i)
+first_10_numbers()
+
+
+#Create a function to calculate sum of first N natural numbers
+def first_N():
+    n=int(input("Enter number"))
+    sum=0
+    for i in range (1,n):
+        sum=sum+i
+    print("Sum is:", sum)
+first_N()
+      
+#Create a function to reverse a number
+def reverse():
+    num = int(input("Enter number to be reversed: "))
+    reversed_num = 0
+    while num > 0:
+        remainder = num % 10
+        reversed_num = (reversed_num * 10) + remainder
+        num = num // 10
+    print(reversed_num, "is the reversed number")
+
+reverse()
+    
+#Create a function to count digits in a number
+def count_digits():
+    num=int(input("Enter number" ))
+    count=0
+    while num>0:
+        num%10
+        num=num//10
+        count+=1
+        
+    print(count, "is the number of digits")
+count_digits()
+
+
+#Create a function to check palindrome number
+def palindrome():
+    num=int(input("Enter a number"))
+    temp=num
+    reversed_num=0
+    while num>0:
+        remainder=num%10
+        reversed_num=(reversed_num*10)+remainder
+        num=num//10
+    if temp==reversed_num:
+        print("The number is a palindrome")
+    else:
+        print("The number is not a palindrome")
+palindrome()
+
+#Create a function to generate Fibonacci series
+def fibonacci():
+    n=int(input("enter number of fibonacci series elements"))
+    num1=0
+    num2=1
+    print(num1)
+    print(num2)
+    for i in range(2,n):
+        num3=num1+num2
+        print(num3)
+        num1=num2
+        num2=num3
+
+fibonacci()
+
+
+        
+#Calculator using functions that contains the following features: user selects operation, program performs calculation, display result
+def calculator():
+    ans="y"
+    while ans=="y": 
+            
+        def sum():
+            sum=num1+num2
+            print(sum, "is the sum of the numbers")
+        def diff():
+            diff=num1-num2
+            print(diff, "is the difference of the numbers")
+        def prod():
+            prod=num1*num2
+            print(prod, "is the product of the numbers")
+        def quo():
+            quo=num1/num2
+            print(quo, "is the quotient of the numbers")
+
+            
+
+        print("""Calculator:
+            1. addition
+            2. subtraction
+            3. multiplication
+            4. division""")
+        choice=int(input("Which operation would you like to perform?"))
+        num1=int(input("Enter a number"))
+        num2=int(input("Enter a number"))
+        if choice==1:
+            sum()
+        elif choice==2:
+            diff()
+        elif choice==3:
+            prod()
+        elif choice==4:
+            quo()
+        else:
+            print("Enter valid choice")
+
+        ans=input("Would you like to continue? (y/n)")
+
+calculator()
+
+
+#Create a text file and store student details
+
+def create_file():
+    with open("students.txt", "w") as f:
+        f.write("Roll No: 1, Name: Rahul \n")
+        f.write("Roll No: 1, Name: Priya \n")
+        f.write("Roll No: 1, Name: Amit \n")
+    
+    print("File 'students.txt' created and data stored successfully!")
+
+create_file()
+
+#Read data from a file
+
+def read_student_file():
+    try:
+        with open("students.txt", "r") as file:
+            print("--- Displaying Student Details ---")
+            content = file.read()
+            print(content)
+            
+    except FileNotFoundError:
+        print("Error: 'students.txt' does not exist. Please run Task 1 first.")
+
+read_student_file()
+
+#Handle division by zero using exception handling
+
+
+def division_by_zero():
+    try:
+        numerator = float(input("Enter the numerator (top number): "))
+        denominator = float(input("Enter the denominator (bottom number): "))
+        
+        result = numerator / denominator
+        print("The result of division is:", result)
+        
+    except ZeroDivisionError:
+        print("Error: You cannot divide a number by zero!")
+    except ValueError:
+        print("Error: Please enter valid numerical values only.")
+
+
+division_by_zero():
+
+#Create a student class with name and marks
+
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def display_info(self):
+        print(f"Student Name: {self.name} | Marks Obtained: {self.marks}")
+
+student1 = Student("Anjali", 85)
+student2 = Student("Vikram", 92)
+
+student1.display_info()
+student2.display_info()
+

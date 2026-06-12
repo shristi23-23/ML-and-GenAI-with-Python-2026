@@ -1,3 +1,5 @@
+#Shristi Dhoundiyal
+#23301172025
 #Assignment 2
 #Find sum of first 10 natural numbers
 k=0

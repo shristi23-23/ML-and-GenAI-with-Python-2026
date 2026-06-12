@@ -1,3 +1,5 @@
+#Shristi Dhoundiyal
+#23301172025
 #Assignment 3
 
 #Create a function to print first 10 natural numbers
